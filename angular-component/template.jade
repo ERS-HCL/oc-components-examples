@@ -13,7 +13,7 @@ script.
     // If multiple oc angular components are in the page, angular will be loaded only once
     // and only if it is not there already ;)
 
-    oc.require('angular', 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js', function (angular){
+    oc.require('angular', 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js', function (angular){
 
       // Now we load our Angular controllers
       oc.require('#{staticpath}js/greeting.js', function () {
@@ -22,7 +22,7 @@ script.
         // This is needed to asyncronously load Angular apps - classic approach would be to add an ng-app
         // on the element's root but this would make angular to error
 
-        angular.bootstrap($('#myComponent'), ["myComponentApp"]);
+        angular.bootstrap(document, ["myComponentApp"]);
 
       });
     });
